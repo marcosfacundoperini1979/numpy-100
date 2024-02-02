@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diagrama de Gantt</title>
+    <link rel="stylesheet" href="https://frappe.github.io/gantt/frappe-gantt.css" />
+</head>
+<body>
+    <div id="gantt"></div>
+
+    <script src="https://frappe.github.io/gantt/frappe-gantt.min.js"></script>
+    <script>
+        var tasks = [
+            {"id": "1", "name": "Realizar un EDA preliminar", "start": "2024-02-01", "end": "2024-02-01", "progress": 100, "dependencies": ""},
+            {"id": "2", "name": "Realizar ETL preliminar", "start": "2024-02-02", "end": "2024-02-02", "progress": 100, "dependencies": "1"},
+            {"id": "3", "name": "Entender y documentar el contexto", "start": "2024-02-03", "end": "2024-02-03", "progress": 100, "dependencies": "2"},
+            {"id": "4", "name": "Definir y documentar los objetivos", "start": "2024-02-01", "end": "2024-02-04", "progress": 100, "dependencies": "1"},
+            {"id": "5", "name": "Definir y documentar los alcances", "start": "2024-02-02", "end": "2024-02-05", "progress": 100, "dependencies": "2"},
+            {"id": "6", "name": "Formular y documentar 5 KPI’s", "start": "2024-02-04", "end": "2024-02-06", "progress": 100, "dependencies": "4"},
+            {"id": "7", "name": "Crear repositorio GitHub", "start": "2024-02-01", "end": "2024-02-02", "progress": 100, "dependencies": "1"},
+            {"id": "8", "name": "Definir y documentar el Stack tecnológico", "start": "2024-02-07", "end": "2024-02-07", "progress": 100, "dependencies": "7"},
+            {"id": "9", "name": "Definir y documentar la metodología de trabajo", "start": "2024-02-02", "end": "2024-02-07", "progress": 100, "dependencies": "2"},
+            {"id": "10", "name": "Definir y documentar roles y responsabilidades", "start": "2024-02-01", "end": "2024-02-07", "progress": 100, "dependencies": "1"},
+            {"id": "11", "name": "Definir y elaborar el cronograma general del proyecto", "start": "2024-02-02", "end": "2024-02-04", "progress": 100, "dependencies": "2"}
+        ];
+
+        var gantt = new Gantt("#gantt", tasks);
+    </script>
+</body>
+
+</html>
